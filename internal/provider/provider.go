@@ -13,6 +13,7 @@ func New() *schema.Provider {
 	return &schema.Provider{
 		ResourcesMap: map[string]*schema.Resource{
 			"tls_private_key":         resourcePrivateKey(),
+			"tls_x25519":              resourceX25519(),
 			"tls_locally_signed_cert": resourceLocallySignedCert(),
 			"tls_self_signed_cert":    resourceSelfSignedCert(),
 			"tls_cert_request":        resourceCertRequest(),
